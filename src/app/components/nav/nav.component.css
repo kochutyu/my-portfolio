@@ -1,0 +1,77 @@
+.tr {
+  width: 100%;
+  height: 0.25vh;
+  background-color: #202426;
+}
+
+.logo {
+  height: 12.5vh;
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo a {
+  color: #364048;
+  font-family: "Soho Gothic Pro";
+  font-size: 48px;
+  font-weight: 300;
+  text-decoration: none;
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.navbar .navbar-a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 6vh;
+  background-color: #2f373b;
+  text-decoration: none;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.02)), to(rgba(255, 255, 255, 0.02)));
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.02) 0%, rgba(255, 255, 255, 0.02) 100%);
+  font-family: Roboto;
+}
+
+.navbar .navbar-a li {
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 32px;
+  text-transform: uppercase;
+  list-style-type: none;
+}
+
+.navbar .navbar-a:hover,
+.navbar .active {
+  background-color: #1ab5b3;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.1)), to(rgba(255, 255, 255, 0.1)));
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%);
+}
+/*# sourceMappingURL=nav.component.css.map */

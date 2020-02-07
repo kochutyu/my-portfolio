@@ -1,0 +1,17 @@
+<nav>
+  <div class="logo">
+    <a [routerLink]="[ '/home' ]">
+      kochuTok
+    </a>
+  </div>
+  <!-- <div class="tr"></div> -->
+  <ul class="navbar">
+    <a class="navbar-a" [routerLink]="[ '/' + item ]" routerLinkActive="active" *ngFor="let item of navigation">
+      <li class="prn">
+        {{item}}
+      </li>
+    </a>
+  </ul>
+  <div class="tr"></div>
+  <app-filter></app-filter>
+</nav>
