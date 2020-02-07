@@ -1,0 +1,50 @@
+.filter-logo {
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+  margin-bottom: 1vh;
+  user-select: none;
+
+  p {
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    color: #1ab5b3;
+    font-family: "Roboto - Thin";
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 32px;
+    margin-right: 3%;
+  }
+}
+
+.filter-item {
+  display: flex;
+  justify-content: flex-end;
+
+  .filter-item-column {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+
+    .active-first-radio, .active-radio {
+      color: #fff;
+    }
+
+    label {
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+      color: #6b7072;
+      font-family: Roboto;
+      font-size: 13px;
+      font-weight: 300;
+      line-height: 24px;
+      user-select: none;
+      input {
+        opacity: 0;
+      }
+    }
+
+    label:hover {
+      cursor: pointer;
+      color: #fff;
+    }
+  }
+}
