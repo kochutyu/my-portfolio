@@ -9,6 +9,9 @@ import { AboutComponent } from './pages/about/about.component';
 import { BlogComponent } from './pages/blog/blog.component';
 import { ServicesComponent } from './pages/services/services.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { NavComponent } from './components/nav/nav.component';
+import { FilterComponent } from './components/nav/filter/filter.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,11 +21,15 @@ import { ContactComponent } from './pages/contact/contact.component';
     AboutComponent,
     BlogComponent,
     ServicesComponent,
-    ContactComponent
+    ContactComponent,
+    NavComponent,
+    FilterComponent
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
