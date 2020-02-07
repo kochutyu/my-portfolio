@@ -1,0 +1,27 @@
+.user-window {
+  width: 100%;
+  height: 100vh;
+  background-color: red;
+}
+
+.user-window .menege-user-content {
+  width: 100%;
+  height: 100vh;
+  background-color: chocolate;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.user-window .menege-user-content .navigation {
+  width: 20%;
+  height: 100vh;
+  background-color: #242b2e;
+}
+
+.user-window .menege-user-content .content {
+  width: 80%;
+  height: 100vh;
+  background-color: #8b0051;
+}
+/*# sourceMappingURL=app.component.css.map */
