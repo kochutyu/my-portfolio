@@ -1,50 +1,66 @@
-.filter-logo {
-  display: flex;
-  justify-content: flex-end;
-  align-items: baseline;
-  margin-bottom: 1vh;
-  user-select: none;
-
-  p {
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
-    color: #1ab5b3;
-    font-family: "Roboto - Thin";
-    font-size: 19px;
-    font-weight: 400;
-    line-height: 32px;
-    margin-right: 3%;
-  }
-}
-
-.filter-item {
-  display: flex;
-  justify-content: flex-end;
-
-  .filter-item-column {
-    display: flex;
-    align-items: flex-end;
-    flex-direction: column;
-
-    .active-first-radio, .active-radio {
-      color: #fff;
-    }
-
-    label {
-      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
-      color: #6b7072;
-      font-family: Roboto;
-      font-size: 13px;
-      font-weight: 300;
-      line-height: 24px;
+.filter{
+    padding: 1vh 0 1vh 0;
+    .filter-logo {
+      display: flex;
+      justify-content: flex-end;
+      align-items: baseline;
+      margin-bottom: 1vh;
       user-select: none;
-      input {
-        opacity: 0;
+    
+      p {
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+        color: #1ab5b3;
+        font-family: "Roboto - Thin";
+        font-size: 19px;
+        font-weight: 400;
+        line-height: 32px;
+        margin-right: 3%;
       }
     }
-
-    label:hover {
-      cursor: pointer;
-      color: #fff;
+    .filter-all{
+        height: 12vh;
+        overflow: auto;
+        // box-shadow: 0 0 27px 7px black;
+        .filter-item {
+          display: flex;
+          justify-content: flex-end;
+        
+          .filter-item-column {
+            display: flex;
+            align-items: flex-end;
+            flex-direction: column;
+        
+            .active-first-radio, .active-radio {
+              color: #fff;
+            }
+        
+            label {
+              text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+              color: #6b7072;
+              font-family: Roboto;
+              font-size: 13px;
+              font-weight: 300;
+              line-height: 24px;
+              user-select: none;
+              input {
+                opacity: 0;
+              }
+            }
+        
+            label:hover {
+              cursor: pointer;
+              color: #fff;
+            }
+          }
+        }
     }
-  }
+    
+    
+    .filter-all::-webkit-scrollbar { width: 5px; height: 3px;}
+    .filter-all::-webkit-scrollbar-button {  background-color: #fff; }
+    .filter-all::-webkit-scrollbar-track {  background-color: #159593;}
+    .filter-all::-webkit-scrollbar-track-piece { background-color: #ffffff;}
+    .filter-all::-webkit-scrollbar-thumb { height: 50px; background-color: #159593; border-radius: 50px;}
+    .filter-all::-webkit-scrollbar-corner { background-color: #159593;}
+    .filter-all::-webkit-resizer { background-color: #159593;}
 }

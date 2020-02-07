@@ -10,6 +10,13 @@ export class FilterComponent implements OnInit {
     'All works',
     'angular',
     'css',
+    'html',
+    'angular',
+    'css',
+    'html',
+    'html',
+    'angular',
+    'css',
     'html'
   ];
 
