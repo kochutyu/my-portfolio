@@ -14,6 +14,7 @@ import { FilterComponent } from './components/nav/filter/filter.component';
 import { FormsModule } from '@angular/forms';
 import { SocialNetworksComponent } from './components/nav/social-networks/social-networks.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { InfoContactComponent } from './components/info-contact/info-contact.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { FooterComponent } from './components/footer/footer.component';
     FilterComponent,
     SocialNetworksComponent,
     FooterComponent,
+    InfoContactComponent,
 
   ],
   imports: [

@@ -1,0 +1,16 @@
+<div class="info-contact">
+  <div class="info-hover" (mouseover) = "hover = true" (mouseleave) = "hover = false">
+    <img src="../../../assets/img/info-contact/info-contact.png" alt="">
+  </div>
+  <ul [ngClass]="{
+      'info-hover-ul': true,
+      'opacity': hover
+    }">
+    <li>
+      <img src="../../../assets/img/info-contact/phone.png" alt=""> +380 99 014 25 94
+    </li>
+    <li>
+      <img src="../../../assets/img/info-contact/email.png" alt=""> kochutyurawork@gmail.com
+    </li>
+  </ul>
+</div>
