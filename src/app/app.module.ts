@@ -12,6 +12,8 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { NavComponent } from './components/nav/nav.component';
 import { FilterComponent } from './components/nav/filter/filter.component';
 import { FormsModule } from '@angular/forms';
+import { SocialNetworksComponent } from './components/nav/social-networks/social-networks.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { FormsModule } from '@angular/forms';
     ServicesComponent,
     ContactComponent,
     NavComponent,
-    FilterComponent
+    FilterComponent,
+    SocialNetworksComponent,
+    FooterComponent,
 
   ],
   imports: [
