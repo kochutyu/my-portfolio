@@ -31,7 +31,6 @@ export class FilterComponent implements OnInit {
 
   thisItem(item): void{
     this.activeItem = item.target.value;
-    alert(this.activeItem)
     this.activeRadio = true;
   }
 
