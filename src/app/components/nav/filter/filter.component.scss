@@ -1,10 +1,10 @@
 .filter{
-    padding: 1vh 0 1vh 0;
+    padding: 10px 0 10px 0;
     .filter-logo {
       display: flex;
       justify-content: flex-end;
       align-items: baseline;
-      margin-bottom: 1vh;
+      margin-bottom: 0;
       user-select: none;
     
       p {
@@ -18,8 +18,9 @@
       }
     }
     .filter-all{
-        height: 12vh;
+        height: 100px;
         overflow: auto;
+        margin-right: 25px;
         // box-shadow: 0 0 27px 7px black;
         .filter-item {
           display: flex;
@@ -61,7 +62,7 @@
     .filter-all::-webkit-scrollbar-button {  background-color: #fff; height: 0;}
     .filter-all::-webkit-scrollbar-track {  background-color: #159593;}
     .filter-all::-webkit-scrollbar-track-piece { background-color: #ffffff;}
-    .filter-all::-webkit-scrollbar-thumb { height: 5vh; background-color: #159593; border-radius: 0;}
+    .filter-all::-webkit-scrollbar-thumb { height: 10px; background-color: #159593; border-radius: 0;}
     .filter-all::-webkit-scrollbar-corner { background-color: #159593;}
     .filter-all::-webkit-resizer { background-color: #159593;}
 }
