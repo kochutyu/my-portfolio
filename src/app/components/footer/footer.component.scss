@@ -1,9 +1,12 @@
-span {
-  color: #a9abac;
-  font-family: "Roboto - Thin";
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 25px;
+.text-aligne-center{
   text-align: center;
-  user-select: none;
+  .rights {
+    color: #a9abac;
+    font-family: "Roboto - Thin";
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 25px;
+    text-align: center;
+    user-select: none;
+  }  
 }
