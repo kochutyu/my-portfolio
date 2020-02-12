@@ -15,6 +15,9 @@ import { FormsModule } from '@angular/forms';
 import { SocialNetworksComponent } from './components/nav/social-networks/social-networks.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { InfoContactComponent } from './components/info-contact/info-contact.component';
+import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { SliderComponent } from './components/slider/slider.component';
+import { ShowMoreComponent } from './components/show-more/show-more.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +33,9 @@ import { InfoContactComponent } from './components/info-contact/info-contact.com
     SocialNetworksComponent,
     FooterComponent,
     InfoContactComponent,
+    PortfolioComponent,
+    SliderComponent,
+    ShowMoreComponent,
 
   ],
   imports: [
