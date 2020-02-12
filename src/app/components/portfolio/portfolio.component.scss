@@ -1,0 +1,119 @@
+.portfolio {
+  width: 100%;
+
+  &::before{
+    content: '';
+    height: 100vh;
+    width: 10px;
+    background-color: red;
+    position: relative;
+    z-index: 10;
+  }
+
+  .portfolio-works {
+    background-color: #242b2e;
+    display: flex;
+    flex-wrap: wrap;
+    
+    .portfolio-work {
+      border: 3px solid #242b2e;
+      list-style-type: none;
+      width: 25%;
+      height: 250px;
+
+      a {
+        user-select: none;   
+        .href {
+          width: 100%;
+          height: 100%;
+          position: relative;
+
+          &:hover .hover {
+            z-index: 3;
+            background-color: #1ab5b3;
+            border: 3px solid white;
+            width: 100%;
+            height: 100%;
+            opacity: 1;
+            animation-duration: 0.5s;
+            animation-name: hover;
+          }
+
+          .opacity {
+            z-index: 2;
+            position: absolute;
+            background-color: black;
+            opacity: 0.4;
+            width: 100%;
+            height: 100%;
+          }
+
+          .hover {
+            opacity: 0;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            .items-info {
+              p {
+                color: #ffffff;
+                font-family: Roboto;
+                font-size: 24px;
+                font-weight: 300;
+                line-height: 30px;
+                word-wrap: break-word;
+              }
+
+              img {
+                position: absolute;
+                right: 15px;
+                bottom: 15px;
+                width: auto;
+                height: auto;
+              }
+            }
+          }
+
+          img {
+            z-index: 1;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+// keyframes mixin
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+// use of keyframes mixin
+@include keyframes(hover) {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
