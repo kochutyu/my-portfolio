@@ -29,27 +29,36 @@
           Other Related Projects
         </h1>
         <div class="describe-text">
-            <div class="bottom-retreat">
-                <app-show-more></app-show-more>
-            </div>
-            <div class="center">
-                <button class="btn-style">Show more...</button>
-            </div>
-                
+          <div class="bottom-retreat">
+            <app-show-more></app-show-more>
+          </div>
+          <div class="center">
+            <button class="btn-style">Show more...</button>
+          </div>
+
         </div>
       </div>
 
     </div>
     <div class="block-2 p25">
-        <div class="project-info">
-            <h1 class="bottom-retreat">
-                Project Info
-            </h1>
-            <div class="block-inline">
-                <img src="../../../assets/img/work/user.png" alt="">
-                <span>kochutyu</span>
-            </div>
-        </div>
+      <div class="project-info bottom-retreat">
+        <h1>
+          Project Info
+        </h1>
+        <app-project-info *ngFor="let item of projectInfo" [item]="item"></app-project-info>
+      </div>
+      <div class="tags bottom-retreat">
+        <h1>
+          Tags
+        </h1>
+        <app-tag [tags]="tags"></app-tag>
+      </div>
+      <div class="project-feature">
+        <h1>
+          Project Features
+        </h1>
+        <app-ul-li-done></app-ul-li-done>
+      </div>
     </div>
   </div>
 
