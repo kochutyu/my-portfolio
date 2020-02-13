@@ -18,6 +18,9 @@ import { InfoContactComponent } from './components/info-contact/info-contact.com
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { ShowMoreComponent } from './components/show-more/show-more.component';
+import { ProjectInfoComponent } from './components/project-info/project-info.component';
+import { TagComponent } from './components/tag/tag.component';
+import { UlLiDoneComponent } from './components/ul-li-done/ul-li-done.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +39,9 @@ import { ShowMoreComponent } from './components/show-more/show-more.component';
     PortfolioComponent,
     SliderComponent,
     ShowMoreComponent,
+    ProjectInfoComponent,
+    TagComponent,
+    UlLiDoneComponent,
 
   ],
   imports: [
