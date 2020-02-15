@@ -1,0 +1,96 @@
+.contact {
+  width: 100%;
+  height: calc(100vh - 50px);
+  background-image: url(../../../assets/img/contact/map.png);
+  background-position: center;
+  background-attachment: scroll;
+
+  .contact-form {
+    background-color: #fff;
+
+    .send-form {
+      .form {
+        .blocks {
+          display: flex;
+          align-items: stretch;
+          width: 100%;
+
+          .block-1 {
+            width: 50%;
+            margin-right: 15px;
+
+            .send-form-view {
+              height: 60px;
+              border: 1px solid #eaeaea;
+              display: flex;
+              align-items: center;
+
+              .img {
+                height: 100%;
+                padding: 15px;
+                display: flex;
+                align-items: center;
+                border-right: 1px solid #eaeaea;
+              }
+
+              .input {
+                height: 100%;
+                width: 100%;
+
+                input {
+                  border: 0;
+                  outline: none;
+                  box-shadow: none;
+                  height: 100%;
+                  width: 100%;
+                  padding-left: 15px;
+                  color: #848484;
+                  font-family: Roboto;
+                  font-size: 14px;
+                  font-weight: 300;
+                  line-height: 30px;
+
+                  &:focus {
+                    border: 2px solid #1ab5b3;
+                    color: #1ab5b3;
+
+                  }
+                }
+              }
+            }
+          }
+
+          .block-2 {
+            width: 50%;
+
+            .textarea {
+              height: 100%;
+              border: 1px solid #eaeaea;
+
+              textarea {
+                width: 100%;
+                height: 100%;
+                border: none;
+                outline: none;
+                box-shadow: none;
+                color: #848484;
+                font-family: Roboto;
+                font-size: 14px;
+                font-weight: 300;
+                line-height: 15px;
+                padding: 15px;
+                resize: none;
+
+                &:focus {
+                  border: 2px solid #1ab5b3;
+                  color: #1ab5b3;
+
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
