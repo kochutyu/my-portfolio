@@ -50,6 +50,10 @@ h1 {
   text-align: center;
 }
 
+.mb10{
+  margin-bottom: 10px;
+}
+
 // padding 25px
 .p25 {
   padding: 25px;
@@ -93,8 +97,7 @@ h1 {
   line-height: 30px;
   text-transform: uppercase;
   &:hover{
-    // outline: 1px solid #242b2e;
-    box-shadow: 0 0 5px 5px #1ab5b3;
+    box-shadow: 0 0 4px 2px #1ab5b3;
     cursor: pointer;
   }
 }
