@@ -22,6 +22,7 @@ import { ProjectInfoComponent } from './components/project-info/project-info.com
 import { TagComponent } from './components/tag/tag.component';
 import { UlLiDoneComponent } from './components/ul-li-done/ul-li-done.component';
 import { MySkillsComponent } from './components/my-skills/my-skills.component';
+import { ContactFormComponent } from './components/contact-form/contact-form.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { MySkillsComponent } from './components/my-skills/my-skills.component';
     TagComponent,
     UlLiDoneComponent,
     MySkillsComponent,
+    ContactFormComponent,
 
   ],
   imports: [

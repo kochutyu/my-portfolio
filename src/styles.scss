@@ -33,10 +33,11 @@ h1 {
   line-height: 26px;
 }
 
-.bottom-line{
+.bottom-line {
   border-bottom: 1px solid rgba($color: #000000, $alpha: .1);
 }
-.center{
+
+.center {
   text-align: center;
   margin: 0 auto;
 }
@@ -50,8 +51,12 @@ h1 {
   text-align: center;
 }
 
-.mb10{
+.mb10 {
   margin-bottom: 10px;
+}
+
+.mb30{
+  margin-bottom: 30px;
 }
 
 // padding 25px
@@ -96,7 +101,8 @@ h1 {
   font-weight: 300;
   line-height: 30px;
   text-transform: uppercase;
-  &:hover{
+
+  &:hover {
     box-shadow: 0 0 4px 2px #1ab5b3;
     cursor: pointer;
   }
@@ -132,4 +138,16 @@ h1 {
 
 ::-webkit-resizer {
   background-color: #242b2e;
+}
+
+p {
+  color: #a3a3a3;
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 30px;
+}
+
+.w100p{
+  width: 100%;
 }
