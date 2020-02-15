@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, Input } from '@angular/core';
 
 @Component({
   selector: 'app-slider',
@@ -7,13 +7,13 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 })
 export class SliderComponent implements OnInit {
   lol: number[] = [1, 2, 3, 4, 5, 6, 7]
-  img: string[] = [
-    'https://numl.org/.379211',
-    'https://numl.org/.089211',
-    'https://numl.org/.789211'
-  ]
+  // img: string[] = [
+  //   'https://numl.org/.379211',
+  //   'https://numl.org/.089211',
+  //   'https://numl.org/.789211'
+  // ]
   iSelect: number = 0;
-
+  @Input() img: any;
   constructor() { }
 
   @ViewChild('nextSlide', { static: false }) nextSlide: ElementRef;
