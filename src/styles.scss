@@ -103,8 +103,11 @@ h1 {
   text-transform: uppercase;
 
   &:hover {
-    box-shadow: 0 0 4px 2px #1ab5b3;
+    box-shadow: 0 0 4px 4px #1ab5b3;
     cursor: pointer;
+  }
+  &:active{
+    box-shadow: 0 0 4px 2px #1ab572;
   }
 }
 

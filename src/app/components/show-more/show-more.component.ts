@@ -26,7 +26,7 @@ export class ShowMoreComponent implements OnInit, AfterViewInit {
   list: any[] = [];
   max_add_list: number = 6;
   min_add_list: number = 3;
-  btn_status: string = 'Show more ...'
+  btn_status: string = 'Show more'
 
   constructor() { }
 
