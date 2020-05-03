@@ -39,11 +39,6 @@
         <i class="fa fa-envelope"></i>
       </a>
     </li>
-    <li data-title="blog">
-      <a [routerLink]="['/blog']" routerLinkActive="active_icon">
-        <i class="fa fa-rss"></i>
-      </a>
-    </li>
     <li data-title="sign-out" *ngIf="AdminService.signIn">
       <a [routerLink]="['/get-admin-settings/home']" (click)="AdminService.signIn = false">
         <i class="fa fa-sign-out"></i>
@@ -73,11 +68,6 @@
         contact
       </li>
     </a>
-    <a [routerLink]="['/blog']" routerLinkActive="active_tab">
-      <li data-title="blog">
-        blog
-      </li>
-    </a>
     <a [routerLink]="['/get-admin-settings/home']" (click)="AdminService.signIn = false">
       <li data-title="sign-out" *ngIf="AdminService.signIn">
         <i class="fa fa-sign-out"></i>
@@ -87,7 +77,7 @@
 
   <!-- NAV_FOR_USER MOBILE -->
   <div class="mobile_nav" role="navigation" *ngIf="deviceWidth<=1080">
-    <div id="menuToggle">
+    <div id="menuToggle" #togle>
       <input type="checkbox"/>
       <span></span>
       <span></span>
@@ -104,9 +94,6 @@
         </a>
         <a pageScroll href="#contact" [routerLink]="['/contact']" routerLinkActive="active_li">
           <li>Contact</li>
-        </a>
-        <a [routerLink]="['/blog']" routerLinkActive="active_li">
-          <li>Blog</li>
         </a>
         <a [routerLink]="['/home']" routerLinkActive="active" *ngIf="AdminService.signIn">
           <li>Sign Out</li>

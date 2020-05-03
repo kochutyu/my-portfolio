@@ -11,10 +11,9 @@ import { AdminComponent } from './admin/admin.component';
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
-  { path: 'home', component: HomeComponent },
-  { path: 'home', component: HomeComponent },
-  { path: 'home', component: HomeComponent },
-  { path: 'blog', component: BlogComponent },
+  { path: 'portfolio', component: HomeComponent },
+  { path: 'about', component: HomeComponent },
+  { path: 'contact', component: HomeComponent },
   {
     path: 'admin', component: AdminComponent
   },
