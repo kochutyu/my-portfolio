@@ -48,7 +48,7 @@ export class AdminService implements INavbar, OnInit {
   describe: string;
 
   // admin
-  signIn: boolean = true;
+  signIn: boolean = false;
 
   // modal ↓
   modal: boolean = false;
@@ -90,7 +90,7 @@ export class AdminService implements INavbar, OnInit {
 
   editWork(): void {
     let work = this.getID;
-    console.log(work);
+    
   }
 
   open_modal(): void {
@@ -120,14 +120,14 @@ export class AdminService implements INavbar, OnInit {
     this.paginatorCount = 0;
     this.editBtnCheckCount = 0;
     this.clearForm();
-    console.log(this.thisWork);
+    
 
   }
 
   getWork(): void {
     this.thisWork.slider.forEach(item => {
       this.thisWorkImgs.push(item);
-      console.log(this.thisWorkImgs);
+      
     })
   }
 

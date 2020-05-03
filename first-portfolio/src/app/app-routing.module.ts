@@ -14,11 +14,9 @@ const routes: Routes = [
   { path: 'portfolio', component: HomeComponent },
   { path: 'about', component: HomeComponent },
   { path: 'contact', component: HomeComponent },
-  {
-    path: 'admin', component: AdminComponent
-  },
   { path: '**', redirectTo: '/home' },
 ];
+// {path: 'admin', component: AdminComponent},
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
