@@ -102,3 +102,16 @@
     top: -2px;
     color: #0088cc;
 }
+
+.linkedin {
+  border: 2px solid #1682ac;
+}
+
+.linkedin:hover {
+  background-color: #1682ac;
+}
+
+.linkedin a {
+  top: 0;
+  color: #1682ac;
+}
