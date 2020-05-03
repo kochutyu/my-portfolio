@@ -10,6 +10,8 @@ import { NgModule } from '@angular/core';
 import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 // FIREBASE
 import { AngularFireModule } from '@angular/fire';
@@ -82,6 +84,7 @@ import { ToastrModule } from 'ngx-toastr';
     BrowserModule,
     AppRoutingModule,
     AngularFontAwesomeModule,
+    ReactiveFormsModule,
     NgxUiLoaderModule.forRoot(ngxUiLoaderConfig),
     NgxUiLoaderRouterModule,
     BrowserAnimationsModule,
@@ -104,7 +107,8 @@ import { ToastrModule } from 'ngx-toastr';
       progressAnimation: 'increasing',
       preventDuplicates: true,
       countDuplicates: true
-    }) // ToastrModule ada
+    }), // ToastrModule ada
+    HttpClientModule // Импортируем модуль
   ],
   providers: [],
   bootstrap: [AppComponent]

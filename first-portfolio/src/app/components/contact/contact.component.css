@@ -44,6 +44,10 @@
   margin-bottom: 5px;
 }
 
+.email-form{
+  margin-bottom: 85px;
+}
+
 /* ADAPTIVE */
 @media screen and (max-width: 1080px) {
   .contact-form {
