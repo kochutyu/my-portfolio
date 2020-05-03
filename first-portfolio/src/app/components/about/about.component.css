@@ -78,6 +78,8 @@
   display: flex;
   min-height: 50px;
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .about-me-services-icon {
