@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { WindowService } from 'src/app/shared/services/window.service';
+import { ToastService } from 'src/app/shared/services/toast.service';
 
 @Component({
   selector: 'app-contact',
@@ -12,7 +14,9 @@ export class ContactComponent implements OnInit {
   form: FormGroup;
   submited: boolean;
   constructor(
-    private http: HttpClient
+    private http: HttpClient,
+    public windowS: WindowService,
+    private tosterS: ToastService
   ) { }
 
   ngOnInit() {
@@ -41,9 +45,14 @@ export class ContactComponent implements OnInit {
       this.submited = false;
       this.form.reset();
     }, error => {
-      this.form.reset();
       this.submited = false;
+      this.tosterS.success(`Dear ${this.form.value.name}, message sent!`, 'I will soon read the message.😎💪🏽');
+      this.form.reset();
     });
+  }
+
+  clearForm(): void { 
+    this.form.reset();
   }
 
 }

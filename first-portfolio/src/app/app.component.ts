@@ -1,8 +1,9 @@
-import { Component, ViewEncapsulation, OnInit, ElementRef, ViewChild, Renderer2 } from '@angular/core';
+import { Component, ViewEncapsulation, OnInit, ElementRef, ViewChild, Renderer2, HostListener } from '@angular/core';
 import * as AOS from '../../node_modules/aos';
 import { AdminService } from './shared/services/admin.service';
 import { FireService } from './shared/services/fire.service';
 import { ToastrService } from 'ngx-toastr';
+import { WindowService } from './shared/services/window.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -20,8 +21,9 @@ export class AppComponent implements OnInit {
     public AdminService: AdminService,
     public FireService: FireService,
     public toast: ToastrService,
-  ) { 
-  
+    private windowS: WindowService
+  ) {
+
   }
   test() {
     this.toast.success("I'm a toast!", "Success!");
@@ -33,19 +35,13 @@ export class AppComponent implements OnInit {
       duration: 700,
       easing: 'linear'
     });
-    // this.adaptiveNavbar();
+    this.windowS.width = window.innerWidth
+    this.windowS.height = window.innerHeight;
   }
-  // adaptiveNavbar(): void {
-  //   window.addEventListener('resize', () => {
-  //     let deviceWidth = document.documentElement.clientWidth;
-  //     if (deviceWidth <= 1150) { // change view contentWidth for tab and mobile version
-  //       this.r.setStyle(this.ContentWidth.nativeElement, 'padding-left', '0');
-  //     } else if (deviceWidth > 1150) {
-  //       this.r.setStyle(this.ContentWidth.nativeElement, 'padding-left', '80px')
-  //     }
-  //     console.log(deviceWidth);
 
-  //   });
-  // }
+  @HostListener('window:resize', ['$event']) onResize(event) {
+    this.windowS.width = event.target.innerWidth
+    this.windowS.height = event.target.innerHeight;
+  }
 
 }

@@ -48,6 +48,11 @@
   margin-bottom: 85px;
 }
 
+.btn-form{
+  display: flex;
+  justify-content: space-between;
+}
+
 /* ADAPTIVE */
 @media screen and (max-width: 1080px) {
   .contact-form {
@@ -64,7 +69,4 @@
     grid-template-columns: 1fr;
   }
 
-  .contact-btn{
-    margin: 0 auto;
-  }
 }

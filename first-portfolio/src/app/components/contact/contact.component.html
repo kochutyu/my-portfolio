@@ -61,7 +61,7 @@
   <div class="devide50"></div>
 
   <!-- CONTACT_FORM -->
-  <form class="contact-form" [formGroup]="form" (ngSubmit)="sendMessage()">
+  <form class="contact-form" [formGroup]="form" (ngSubmit)="sendMessage()" *ngIf="windowS.width>800">
     <!-- GENERAL_INFORMATION -->
     <div class="contact-form-input left">
       <!-- NAME -->
@@ -86,7 +86,38 @@
       <!-- <input type="text" class="form-control " [(ngModel)]="contact_textarea"> -->
 
       <!-- BTN_CLEAR_MESSAGE -->
-      <button type="button" class="btn-por contact-btn" (click)="contactClear()">Clear message</button>
+      <button type="button" class="btn-por contact-btn" (click)="clearForm()">Clear message</button>
     </div>
   </form>
+
+  <form class="contact-form" [formGroup]="form" (ngSubmit)="sendMessage()" *ngIf="windowS.width<=800">
+    <!-- GENERAL_INFORMATION -->
+    <div class="contact-form-input left">
+      <!-- NAME -->
+      <div class="contact-form-input-name mb-20">
+        <h6>Name</h6>
+        <input type="text" class="form-control" formControlName="name">
+      </div>
+      <!-- EMAIL -->
+      <div class="contact-form-input-name mb-20">
+        <h6>Email</h6>
+        <input type="text" class="form-control" formControlName="email">
+      </div>
+    </div>
+    <!-- TEXTAREA_MESSAGE -->
+    <div class="contact-form-input">
+      <h6>Message</h6>
+      <textarea cols="30" rows="8" class="form-control mb-20" [(ngModel)]="contact_textarea" name="textarea"
+      formControlName="text"></textarea>
+      <!-- <input type="text" class="form-control " [(ngModel)]="contact_textarea"> -->
+      
+      <!-- BTN_CLEAR_MESSAGE -->
+      <div class="btn-form">
+        <button class="btn-por contact-btn" type="submit">Send message</button>
+        <button type="button" class="btn-por contact-btn" (click)="clearForm()">Clear message</button>
+      </div>
+    </div>
+  </form>
+
+  
 </div>
