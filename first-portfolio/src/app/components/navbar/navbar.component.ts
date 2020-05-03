@@ -19,14 +19,16 @@ export class NavbarComponent implements OnInit {
   signIn: boolean;
   fragment: string;
 
+  @ViewChild('lol', { static: false }) lol: ElementRef;
 
 
 
-  @ViewChild('thisNavbar', { static: false }) thisNavbar: ElementRef; // get navbar
-  @ViewChild('navbarUlHeight', {static: false}) navbarUlHeight: ElementRef; // get ul height
-  @ViewChild('firstNavbarLi', {static: false}) firstNavbarLi: ElementRef; // get ul height
+
+  @ViewChild('thisNavbar', { static: true }) thisNavbar: ElementRef; // get navbar
+  @ViewChild('navbarUlHeight', { static: true }) navbarUlHeight: ElementRef; // get ul height
+  @ViewChild('firstNavbarLi', { static: true }) firstNavbarLi: ElementRef; // get ul height
   // @ViewChild('closeMenuPhone', {static: false}) closeMenuPhone: ElementRef; // get closeMenuPhone
-  @ViewChild('navbarPhone', {static: false}) navbarPhone: ElementRef;
+  @ViewChild('navbarPhone', { static: true }) navbarPhone: ElementRef;
   constructor(
     private CloudService: CloudService,
     public AdminService: AdminService,
@@ -41,9 +43,10 @@ export class NavbarComponent implements OnInit {
   deviceWidth: number = window.innerWidth; // condition for navbar
   deviceHeight: number = document.documentElement.clientHeight;
 
-  scrollTop:number = document.documentElement.scrollTop;
-  
+  scrollTop: number = document.documentElement.scrollTop;
+
   ngOnInit() {
+    console.log(document.querySelector('.dropToggle'));
     
     window.addEventListener('resize', () => { // get width browser
       this.deviceWidth = window.innerWidth;
@@ -53,12 +56,12 @@ export class NavbarComponent implements OnInit {
     });
 
     console.log(document.querySelector('.menuPhone'));
-    
-    
+
+
     // document.addEventListener('scroll', () => { // show navbar for tab and mobile
-      
+
     //   this.scrollTop = document.documentElement.scrollTop;
-      
+
     //   if (this.scrollTop >= this.deviceHeight/2) {
     //     this.r.setStyle(this.thisNavbar.nativeElement, 'display', 'flex');
     //   }else if (this.deviceWidth > 1150) {
@@ -70,26 +73,15 @@ export class NavbarComponent implements OnInit {
     // });
   }
 
-  
+
 
   countDownUp: number = 0;
-  downUp(): void{
-    this.countDownUp++;
-    if(this.countDownUp % 2 !== 0) {
-      this.navbarUlHeight.nativeElement.style.height = '100vh';
-      this.thisNavbar.nativeElement.style.maxHeight = '100vh';
-      this.firstNavbarLi.nativeElement.style.marginBottom = '25vh';
-      this.firstNavbarLi.nativeElement.style.top = '8px';
-    } else{
-      this.navbarUlHeight.nativeElement.style.height = '45px'
-      this.thisNavbar.nativeElement.style.maxHeight = '65px';
-      this.firstNavbarLi.nativeElement.style.marginBottom = '0';
-      this.firstNavbarLi.nativeElement.style.top = '0';
-    }
+  downUp(): void {
+    this.lol.nativeElement.click();
   }
 
   scrollToElement($element): void {
     console.log($element);
-    $element.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+    $element.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
   }
 }

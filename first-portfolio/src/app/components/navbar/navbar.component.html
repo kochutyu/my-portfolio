@@ -77,25 +77,25 @@
 
   <!-- NAV_FOR_USER MOBILE -->
   <div class="mobile_nav" role="navigation" *ngIf="deviceWidth<=1080">
-    <div id="menuToggle" #togle>
-      <input type="checkbox"/>
+    <div id="menuToggle">
+      <input class="dropToggle" type="checkbox" #lol/>
       <span></span>
       <span></span>
       <span></span>
       <ul id="menu" class="menuPhone">
-        <a pageScroll href="#home" [routerLink]="['/home']" routerLinkActive="active_li">
+        <a (click)="downUp()" pageScroll href="#home" [routerLink]="['/home']" routerLinkActive="active_li">
           <li>Home</li>
         </a>
-        <a pageScroll href="#portfolio" [routerLink]="['/portfolio']" routerLinkActive="active_li">
+        <a (click)="downUp()" pageScroll href="#portfolio" [routerLink]="['/portfolio']" routerLinkActive="active_li">
           <li>Portfolio</li>
         </a>
-        <a pageScroll href="#about" [routerLink]="['/about']" routerLinkActive="active_li">
+        <a (click)="downUp()" pageScroll href="#about" [routerLink]="['/about']" routerLinkActive="active_li">
           <li>About</li>
         </a>
-        <a pageScroll href="#contact" [routerLink]="['/contact']" routerLinkActive="active_li">
+        <a (click)="downUp()" pageScroll href=" #contact" [routerLink]="['/contact']" routerLinkActive="active_li">
           <li>Contact</li>
         </a>
-        <a [routerLink]="['/home']" routerLinkActive="active" *ngIf="AdminService.signIn">
+        <a (click)="downUp()" [routerLink]="['/home']" routerLinkActive="active" *ngIf="AdminService.signIn">
           <li>Sign Out</li>
         </a>
       </ul>
